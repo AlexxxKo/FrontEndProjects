@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #333;
-    --color-secondary: #fff;
+    --color-text-primary: #333;
+    --color-text-secondary: #fff;
     --color-text: #999;
     --color-accent: #fce38a;
     --color-accent-secondary: #f38181;
@@ -10,36 +10,36 @@
     --font-text: "Roboto", sans-serif;
 
     --container-max: 1230px;
-    --container-padding: 0 15px;
+    --container-padding: 15px;
 }
 
 body {
-    font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-family: var(--font-primary), sans-serif;
+    font-size: .9375rem; /* 15 px */
     line-height: 1.6;
-    color: var(--color-primary);
+    color: var(--color-text-primary);
 }
 
 .container {
     inline-size: 100%;
     max-inline-size: var(--container-max);
-    padding: var(--container-padding);
+    padding-inline: var(--container-padding);
     margin-inline: auto;
 }
 
 .btn {
     display: inline-block;
     padding: 0.75rem 1.6875rem;
-    border: 3px solid var(--color-secondary);
-    color: var(--color-secondary);
+    border: 3px solid var(--color-text-secondary);
+    color: var(--color-text-secondary);
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color 0.1s ease, color 0.1s ease;
 
     &:hover, &:focus-visible {
-        background-color: var(--color-secondary);
-        color: var(--color-primary);
+        background-color: var(--color-text-secondary);
+        color: var(--color-text-primary);
     }
 }
 
@@ -61,7 +61,7 @@ body {
 .header__logo {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--color-text-secondary);
 }
 
 .nav {
@@ -81,7 +81,7 @@ body {
 .nav__link {
     position: relative;
     display: inline-block;
-    color: var(--color-secondary);
+    color: var(--color-text-secondary);
     font-size: .875rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -110,7 +110,7 @@ body {
 .nav__list--icons {
     gap: 2.5rem;
     margin-left: 3.125rem;
-    color: var(--color-secondary);
+    color: var(--color-text-secondary);
 }
 
 /* intro */
@@ -120,7 +120,7 @@ body {
     flex-direction: column;
     justify-content: center;
     min-block-size: 100svh;
-    color: var(--color-secondary);
+    color: var(--color-text-secondary);
     background: url("../img/intro_bg.jpg") center / cover no-repeat;
 }
 
@@ -133,7 +133,7 @@ body {
 
 .intro__suptitle {
     margin-block-end: 1.25rem;
-    font-family: var(--font-secondary);
+    font-family: var(--font-secondary), cursive;
     font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 
@@ -148,7 +148,7 @@ body {
         inline-size: 60px;
         block-size: 3px;
         margin: 3.75rem auto 3.125rem;
-        background-color: var(--color-secondary);
+        background-color: var(--color-text-secondary);
     }
 }
 
@@ -174,7 +174,7 @@ body {
     position: relative;
     flex: 1;
     padding-block-start: 1.25rem;
-    border-block-start: 3px solid color-mix(in srgb, var(--color-secondary) 70%, transparent);
+    border-block-start: 3px solid color-mix(in srgb, var(--color-text-secondary) 70%, transparent);
     font-size: 1.125rem;
     text-transform: uppercase;
     text-align: start;
@@ -195,11 +195,11 @@ body {
     }
 
     &:hover {
-        border-block-start-color: var(--color-secondary);
+        border-block-start-color: var(--color-text-secondary);
     }
 
     &.slider__item--active {
-        border-block-start-color: var(--color-secondary);
+        border-block-start-color: var(--color-text-secondary);
 
         &::before {
             transform: scaleX(1);
